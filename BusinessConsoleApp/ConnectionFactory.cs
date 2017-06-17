@@ -3,11 +3,13 @@ using System.Data.SqlClient;
 
 namespace BusinessConsoleApp
 {
-    internal class ConnectionFactory
+    public class ConnectionFactory
     {
+        public string ConnectionString =>
+            "";
         public IDbConnection Create()
         {
-            return new SqlConnection();
+            return new SqlConnection(ConnectionString);
         }
     }
 }
