@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{58F0BC26-08E0-4EA7-B8E3-E1A338139D21}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DbMigrationConsoleApp</RootNamespace>
-    <AssemblyName>DbMigrationConsoleApp</AssemblyName>
+    <RootNamespace>BusinessConsoleApp</RootNamespace>
+    <AssemblyName>BusinessConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

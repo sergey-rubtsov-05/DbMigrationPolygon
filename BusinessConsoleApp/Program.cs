@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BusinessConsoleApp.Models;
 using Dapper;
-using DbMigrationConsoleApp.Models;
 
-namespace DbMigrationConsoleApp
+namespace BusinessConsoleApp
 {
     class Program
     {
@@ -15,12 +11,13 @@ namespace DbMigrationConsoleApp
             var connectionFactory = new ConnectionFactory();
             using (var connection = connectionFactory.Create())
             {
-                var persons = connection.Query<Person>("SELECT * FROM Persons");
+                var persons = connection.Query<Person>($"SELECT {nameof(Person.Id)}, {nameof(Person.FirstName)}, {nameof(Person.LastName)} FROM Persons");
                 foreach (var person in persons)
                 {
                     Console.WriteLine(person);
                 }
             }
+            Console.ReadKey();
         }
     }
 }

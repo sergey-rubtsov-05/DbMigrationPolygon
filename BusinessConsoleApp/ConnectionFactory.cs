@@ -1,7 +1,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DbMigrationConsoleApp
+namespace BusinessConsoleApp
 {
     internal class ConnectionFactory
     {
